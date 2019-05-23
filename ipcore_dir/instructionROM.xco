@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Wed Apr 24 10:31:07 2019
+# Date: Thu May 23 05:00:03 2019
 #
 ##############################################################
 #
@@ -40,7 +40,7 @@ SELECT Distributed_Memory_Generator xilinx.com:ip:dist_mem_gen:7.2
 # END Select
 # BEGIN Parameters
 CSET ce_overrides=ce_overrides_sync_controls
-CSET coefficient_file=D:\workspace\mips\u201713307.coe
+CSET coefficient_file=D:\workspace\mips\cpu_ins.coe
 CSET common_output_ce=false
 CSET common_output_clk=false
 CSET component_name=instructionROM
@@ -70,4 +70,4 @@ CSET sync_reset_qspo=false
 MISC pkg_timestamp=2012-11-21T20:07:40Z
 # END Extra information
 GENERATE
-# CRC: 75c54d63
+# CRC: b08f4e8a

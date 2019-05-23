@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-04-24T20:02:04</DateModified>
+  <DateModified>2019-05-23T12:58:53</DateModified>
   <ModuleName>top</ModuleName>
   <SummaryTimeStamp>2019-04-11T12:15:05</SummaryTimeStamp>
-  <SavedFilePath>D:/workspace/ISE/mips/iseconfig/top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/workspace/ISE/mips\</ImplementationReportsDirectory>
+  <SavedFilePath>D:/workspace/ISE/SingleCycleCPU/iseconfig/top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/workspace/ISE/SingleCycleCPU\</ImplementationReportsDirectory>
   <DateInitialized>2019-04-11T02:22:15</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
