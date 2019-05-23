@@ -1,4 +1,4 @@
-module mainCtr(                 //主控制器源码
+module mainCtr(                 
     input [5:0] opCode, 
     output regDst, 
     output J,
@@ -27,6 +27,7 @@ module mainCtr(                 //主控制器源码
             6'b101011:temp = 10'bx00x_1010_00;    //sw
             6'b000100:temp = 10'bx01x_0000_01;    //beq
             6'b000010:temp = 10'bx10x_x000_xx;    //j
-            default: temp = 10'b0000_0000_00;     
+            6'b001000:temp = 10'b0000_1100_00;    //addi
+            default: temp = 10'b0000_0000_00;    
         endcase
 endmodule

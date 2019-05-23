@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-05-23T12:58:53</DateModified>
+  <DateModified>2019-05-23T15:46:57</DateModified>
   <ModuleName>top</ModuleName>
   <SummaryTimeStamp>2019-04-11T12:15:05</SummaryTimeStamp>
   <SavedFilePath>D:/workspace/ISE/SingleCycleCPU/iseconfig/top.xreport</SavedFilePath>

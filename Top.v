@@ -1,5 +1,3 @@
-`timescale 1ns / 1ps
-
 module top( 
     input clkin, 
     input reset 
@@ -45,8 +43,19 @@ always @(negedge clkin)
     end
 
 
-instructionROM imem( .a(pc[8:2]), .clk(clkin), .qspo(inst) );
-dataRAM dmem( .a(aluRes[7:2]), .d(RtData), .clk(!clkin), .we(memwrite), .spo(memreaddata) );
+instructionROM instrROM( 
+    .a(pc[8:2]), 
+    .clk(clkin), 
+    .spo(inst) 
+    );
+
+dataRAM dRAM(
+     .a(aluRes[7:2]), 
+     .d(RtData), 
+     .clk(!clkin), 
+     .we(memwrite), 
+     .spo(memreaddata) 
+     );
 
 mainCtr mainctr(
 .opCode(inst[31:26]),
@@ -82,6 +91,7 @@ regFile regfile(
     );
 
 signext signext(.inst(inst[15:0]), .data(expand));
+
 assign mux1=reg_dst?inst[15:11]:inst[20:16]; 
 assign mux2=alu_src?expand:RtData; 
 assign mux3=memtoreg?memreaddata:aluRes; 
@@ -91,4 +101,5 @@ assign choose4=branch&zero;
 assign expand2=expand<<2; 
 assign jmpaddr={add4[31:28],inst[25:0],2'b00}; 
 assign address=pc+expand2;
+
 endmodule

@@ -23,12 +23,10 @@ module ALU(                                             //ALU
                         zero=1;
                     else zero=0; 
                 end
-            4'b0111: 
+            4'b0111: 	//小于设置
                 begin 
                     if(input1<input2) ALURes=1;
                 end
-            //4'b1100: 
-            //    ALURes = ~(input1|input2);
             default: 
                 ALURes=0;
             endcase 

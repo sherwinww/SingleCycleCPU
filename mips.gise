@@ -92,17 +92,12 @@
     <transform xil_pn:end_ts="1556084204" xil_pn:in_ck="2703420539976310050" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1556084204">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="../mips_cpu_source/Mips1_regFile.v"/>
-      <outfile xil_pn:name="../mips_cpu_source/Mips2_ALU.v"/>
-      <outfile xil_pn:name="../mips_cpu_source/Mips3_mainCtr.v"/>
-      <outfile xil_pn:name="../mips_cpu_source/Mips4_ALUCtr.v"/>
-      <outfile xil_pn:name="../mips_cpu_source/Mips5_signnext.v"/>
-      <outfile xil_pn:name="../mips_cpu_source/Top.v"/>
-      <outfile xil_pn:name="alu_test.v"/>
-      <outfile xil_pn:name="aluctr_test.v"/>
-      <outfile xil_pn:name="mainctr_test.v"/>
-      <outfile xil_pn:name="reg_test.v"/>
-      <outfile xil_pn:name="top_test.v"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1556106975" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6509636757071394089" xil_pn:start_ts="1556106975">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -116,6 +111,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
@@ -127,43 +123,34 @@
     <transform xil_pn:end_ts="1556084204" xil_pn:in_ck="2703420539976310050" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1556084204">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="../mips_cpu_source/Mips1_regFile.v"/>
-      <outfile xil_pn:name="../mips_cpu_source/Mips2_ALU.v"/>
-      <outfile xil_pn:name="../mips_cpu_source/Mips3_mainCtr.v"/>
-      <outfile xil_pn:name="../mips_cpu_source/Mips4_ALUCtr.v"/>
-      <outfile xil_pn:name="../mips_cpu_source/Mips5_signnext.v"/>
-      <outfile xil_pn:name="../mips_cpu_source/Top.v"/>
-      <outfile xil_pn:name="alu_test.v"/>
-      <outfile xil_pn:name="aluctr_test.v"/>
-      <outfile xil_pn:name="mainctr_test.v"/>
-      <outfile xil_pn:name="reg_test.v"/>
-      <outfile xil_pn:name="top_test.v"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1556106978" xil_pn:in_ck="8433572203694020786" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4707913015762535649" xil_pn:start_ts="1556106975">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="top_test_beh.prj"/>
-      <outfile xil_pn:name="top_test_isim_beh.exe"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1556106979" xil_pn:in_ck="1566626047598919497" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="932399066956171348" xil_pn:start_ts="1556106978">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="top_test_isim_beh.wdb"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1554920177" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1554920177">
       <status xil_pn:value="SuccessfullyRun"/>
