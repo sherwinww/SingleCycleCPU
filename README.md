@@ -19,7 +19,10 @@
 
 ### 项目使用
 
-- 下载源码至本地
+- 下载源码至本地（**路径不能包含中文字符**）
+  - [release界面](https://github.com/sherwinww/SingleCycleCPU/releases)下载压缩包自行解压
+  - 或者通过git clone至本地
+
 - 用ISE打开工程
 
 ![](https://i.loli.net/2019/05/23/5ce62dc6f0b0410863.png)
