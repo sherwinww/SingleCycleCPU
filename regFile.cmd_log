@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/workspace/ISE/mips/Mips1_regFile.v -lang verilog -prj mips -o regFile.spl -module regFile -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 regFile.spl D:/workspace/ISE/mips/regFile.sym 

@@ -1,0 +1,5 @@
+verilog isim_temp "../mips_cpu_source/Mips5_signnext.v"
+verilog isim_temp "../mips_cpu_source/Mips2_ALU.v"
+verilog isim_temp "../mips_cpu_source/Mips1_regFile.v"
+verilog isim_temp "../mips_cpu_source/Top.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "D:/workspace/ISE/mips/top.xst" -ofn "D:/workspace/ISE/mips/top.syr" 
+vhdtdtfi -lang verilog -prj mips -o D:/workspace/ISE/mips/top.tfi -lib work D:/workspace/ISE/mips//Top.v -module top -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+xst -intstyle ise -ifn "D:/workspace/ISE/mips/top.xst" -ofn "D:/workspace/ISE/mips/top.syr" 
+xst -intstyle ise -ifn "D:/workspace/ISE/mips/top.xst" -ofn "D:/workspace/ISE/mips/top.syr" 
+vhdtdtfi -lib work D:/workspace/ISE/mips/Top.v -lang verilog -prj mips -o top.spl -module top -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 top.spl D:/workspace/ISE/mips/top.sym 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-csg324-3 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+xst -intstyle ise -ifn "D:/workspace/ISE/mips/top.xst" -ofn "D:/workspace/ISE/mips/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-csg324-3 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 

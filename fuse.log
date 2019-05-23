@@ -1,0 +1,38 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/workspace/ISE/mips/top_test_isim_beh.exe" -prj "D:/workspace/ISE/mips/top_test_beh.prj" "work.top_test" "work.glbl" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/workspace/ISE/mips/../mips_cpu_source/Mips5_signnext.v" into library work
+Analyzing Verilog file "D:/workspace/ISE/mips/../mips_cpu_source/Mips4_ALUCtr.v" into library work
+WARNING:HDLCompiler:751 - "D:/workspace/ISE/mips/../mips_cpu_source/Mips4_ALUCtr.v" Line 6: Redeclaration of ansi port ALUCtr is not allowed
+Analyzing Verilog file "D:/workspace/ISE/mips/../mips_cpu_source/Mips3_mainCtr.v" into library work
+Analyzing Verilog file "D:/workspace/ISE/mips/../mips_cpu_source/Mips2_ALU.v" into library work
+WARNING:HDLCompiler:751 - "D:/workspace/ISE/mips/../mips_cpu_source/Mips2_ALU.v" Line 8: Redeclaration of ansi port ALURes is not allowed
+WARNING:HDLCompiler:751 - "D:/workspace/ISE/mips/../mips_cpu_source/Mips2_ALU.v" Line 9: Redeclaration of ansi port zero is not allowed
+Analyzing Verilog file "D:/workspace/ISE/mips/../mips_cpu_source/Mips1_regFile.v" into library work
+Analyzing Verilog file "D:/workspace/ISE/mips/ipcore_dir/instructionROM.v" into library work
+Analyzing Verilog file "D:/workspace/ISE/mips/ipcore_dir/dataRAM.v" into library work
+Analyzing Verilog file "D:/workspace/ISE/mips/../mips_cpu_source/Top.v" into library work
+Analyzing Verilog file "D:/workspace/ISE/mips/top_test.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module DIST_MEM_GEN_V7_2(C_FAMILY="arti...
+Compiling module instructionROM
+Compiling module DIST_MEM_GEN_V7_2(C_FAMILY="arti...
+Compiling module dataRAM
+Compiling module mainCtr
+Compiling module ALU
+Compiling module ALUCtr
+Compiling module regFile
+Compiling module signext
+Compiling module top
+Compiling module top_test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 12 Verilog Units
+Built simulation executable D:/workspace/ISE/mips/top_test_isim_beh.exe
+Fuse Memory Usage: 29260 KB
+Fuse CPU Usage: 515 ms

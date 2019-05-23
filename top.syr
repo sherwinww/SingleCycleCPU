@@ -1,0 +1,632 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\workspace\ISE\mips\Mips5_signnext.v" into library work
+Parsing module <signext>.
+Analyzing Verilog file "D:\workspace\ISE\mips\Mips4_ALUCtr.v" into library work
+Parsing module <ALUCtr>.
+WARNING:HDLCompiler:751 - "D:\workspace\ISE\mips\Mips4_ALUCtr.v" Line 6: Redeclaration of ansi port ALUCtr is not allowed
+Analyzing Verilog file "D:\workspace\ISE\mips\Mips3_mainCtr.v" into library work
+Parsing module <mainCtr>.
+Analyzing Verilog file "D:\workspace\ISE\mips\Mips2_ALU.v" into library work
+Parsing module <ALU>.
+WARNING:HDLCompiler:751 - "D:\workspace\ISE\mips\Mips2_ALU.v" Line 8: Redeclaration of ansi port ALURes is not allowed
+WARNING:HDLCompiler:751 - "D:\workspace\ISE\mips\Mips2_ALU.v" Line 9: Redeclaration of ansi port zero is not allowed
+Analyzing Verilog file "D:\workspace\ISE\mips\Mips1_regFile.v" into library work
+Parsing module <regFile>.
+Analyzing Verilog file "D:\workspace\ISE\mips\ipcore_dir\instructionROM.v" into library work
+Parsing module <instructionROM>.
+Analyzing Verilog file "D:\workspace\ISE\mips\ipcore_dir\dataRAM.v" into library work
+Parsing module <dataRAM>.
+Analyzing Verilog file "D:\workspace\ISE\mips\Top.v" into library work
+Parsing module <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <instructionROM>.
+WARNING:HDLCompiler:1499 - "D:\workspace\ISE\mips\ipcore_dir\instructionROM.v" Line 39: Empty module <instructionROM> remains a black box.
+
+Elaborating module <dataRAM>.
+WARNING:HDLCompiler:1499 - "D:\workspace\ISE\mips\ipcore_dir\dataRAM.v" Line 39: Empty module <dataRAM> remains a black box.
+
+Elaborating module <mainCtr>.
+WARNING:HDLCompiler:1127 - "D:\workspace\ISE\mips\Top.v" Line 60: Assignment to memread ignored, since the identifier is never used
+
+Elaborating module <ALU>.
+
+Elaborating module <ALUCtr>.
+
+Elaborating module <regFile>.
+
+Elaborating module <signext>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "D:\workspace\ISE\mips\Top.v".
+INFO:Xst:3210 - "D:\workspace\ISE\mips\Top.v" line 51: Output port <memRe> of the instance <mainctr> is unconnected or connected to loadless signal.
+    Found 32-bit register for signal <add4>.
+    Found 32-bit register for signal <pc>.
+    Found 32-bit adder for signal <mux5[31]_GND_1_o_add_1_OUT> created at line 38.
+    Found 32-bit adder for signal <address> created at line 93.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  64 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <top> synthesized.
+
+Synthesizing Unit <mainCtr>.
+    Related source file is "D:\workspace\ISE\mips\Mips3_mainCtr.v".
+    Summary:
+	no macro.
+Unit <mainCtr> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "D:\workspace\ISE\mips\Mips2_ALU.v".
+    Found 32-bit subtractor for signal <input1[31]_input2[31]_sub_4_OUT> created at line 21.
+    Found 32-bit adder for signal <input1[31]_input2[31]_add_2_OUT> created at line 18.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0100> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0112> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0123> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0134> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0145> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0156> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0167> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0178> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0189> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0200> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0211> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0222> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0233> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0244> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0255> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0266> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0277> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0288> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0299> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0310> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0321> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0332> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0343> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0354> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0365> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0376> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0387> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0398> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0409> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0420> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0431> created at line 12.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0442> created at line 12.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<27>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <zero>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALURes<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator greater for signal <input1[31]_input2[31]_LessThan_6_o> created at line 28
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  33 Latch(s).
+	inferred   1 Comparator(s).
+	inferred  65 Multiplexer(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <ALUCtr>.
+    Related source file is "D:\workspace\ISE\mips\Mips4_ALUCtr.v".
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUCtr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUCtr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUCtr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUCtr<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   4 Latch(s).
+Unit <ALUCtr> synthesized.
+
+Synthesizing Unit <regFile>.
+    Related source file is "D:\workspace\ISE\mips\Mips1_regFile.v".
+    Found 992-bit register for signal <n0046[991:0]>.
+    Found 32-bit 31-to-1 multiplexer for signal <RsAddr[4]_regs[31][31]_wide_mux_1_OUT> created at line 13.
+    Found 32-bit 31-to-1 multiplexer for signal <RtAddr[4]_regs[31][31]_wide_mux_4_OUT> created at line 14.
+    Summary:
+	inferred 992 D-type flip-flop(s).
+	inferred  35 Multiplexer(s).
+Unit <regFile> synthesized.
+
+Synthesizing Unit <signext>.
+    Related source file is "D:\workspace\ISE\mips\Mips5_signnext.v".
+    Summary:
+	no macro.
+Unit <signext> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 1
+# Registers                                            : 3
+ 32-bit register                                       : 2
+ 992-bit register                                      : 1
+# Latches                                              : 37
+ 1-bit latch                                           : 37
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 105
+ 1-bit 2-to-1 multiplexer                              : 33
+ 1-bit 7-to-1 multiplexer                              : 32
+ 32-bit 2-to-1 multiplexer                             : 37
+ 32-bit 31-to-1 multiplexer                            : 2
+ 5-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/instructionROM.ngc>.
+Reading core <ipcore_dir/dataRAM.ngc>.
+Loading core <instructionROM> for timing and area information for instance <imem>.
+Loading core <dataRAM> for timing and area information for instance <dmem>.
+WARNING:Xst:1710 - FF/Latch <ALUCtr_3> (without init value) has a constant value of 0 in block <aluctr>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 1
+# Registers                                            : 1056
+ Flip-Flops                                            : 1056
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 136
+ 1-bit 2-to-1 multiplexer                              : 65
+ 1-bit 7-to-1 multiplexer                              : 32
+ 32-bit 2-to-1 multiplexer                             : 36
+ 32-bit 31-to-1 multiplexer                            : 2
+ 5-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <ALUCtr_3> (without init value) has a constant value of 0 in block <ALUCtr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <add4_0> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_14> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_15> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_16> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_17> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_18> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_19> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_20> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_21> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_22> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_23> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_24> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_26> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_27> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_28> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_29> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_30> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <add4_31> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_0> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_14> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_15> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_16> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_17> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_18> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_19> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_20> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_21> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_22> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_23> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_24> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_26> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_27> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_28> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_29> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_30> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <pc_31> of sequential type is unconnected in block <top>.
+
+Optimizing unit <top> ...
+
+Optimizing unit <regFile> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <ALUCtr> ...
+INFO:Xst:3203 - The FF/Latch <add4_2> in Unit <top> is the opposite to the following FF/Latch, which will be removed : <pc_2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 4.
+INFO:Xst:2260 - The FF/Latch <U0/xst_options.dist_mem_inst/gen_rom.rom_inst/qspo_int_31> in Unit <imem> is equivalent to the following FF/Latch : <U0/xst_options.dist_mem_inst/gen_rom.rom_inst/qspo_int_26> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_options.dist_mem_inst/gen_rom.rom_inst/qspo_int_31> in Unit <imem> is equivalent to the following FF/Latch : <U0/xst_options.dist_mem_inst/gen_rom.rom_inst/qspo_int_26> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1005
+ Flip-Flops                                            : 1005
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2232
+#      GND                         : 2
+#      INV                         : 2
+#      LUT2                        : 16
+#      LUT3                        : 79
+#      LUT4                        : 31
+#      LUT5                        : 170
+#      LUT6                        : 1700
+#      MUXCY                       : 89
+#      MUXF7                       : 64
+#      VCC                         : 1
+#      XORCY                       : 78
+# FlipFlops/Latches                : 1091
+#      FD                          : 50
+#      FDCE                        : 992
+#      FDR_1                       : 12
+#      FDS_1                       : 1
+#      LD                          : 36
+# RAMS                             : 32
+#      RAM64X1S                    : 32
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 1
+#      IBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1091  out of  126800     0%  
+ Number of Slice LUTs:                 2030  out of  63400     3%  
+    Number used as Logic:              1998  out of  63400     3%  
+    Number used as Memory:               32  out of  19000     0%  
+       Number used as RAM:               32
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2066
+   Number with an unused Flip Flop:     975  out of   2066    47%  
+   Number with an unused LUT:            36  out of   2066     1%  
+   Number of fully used LUT-FF pairs:  1055  out of   2066    51%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                           2
+ Number of bonded IOBs:                   2  out of    210     0%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------------------------+-------------------------+-------+
+Clock Signal                                                                               | Clock buffer(FF name)   | Load  |
+-------------------------------------------------------------------------------------------+-------------------------+-------+
+clkin                                                                                      | BUFGP                   | 1087  |
+alu/_n0102(alu/Mmux__n010211:O)                                                            | BUFG(*)(alu/ALURes_31)  | 32    |
+alu/Mmux_ALUCtr[3]_input1[31]_Select_15_o22(alu/Mmux_ALUCtr[3]_input1[31]_Select_15_o221:O)| NONE(*)(alu/zero)       | 1     |
+aluctr/_n0029(aluctr/out1:O)                                                               | NONE(*)(aluctr/ALUCtr_0)| 3     |
+-------------------------------------------------------------------------------------------+-------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.981ns (Maximum Frequency: 167.203MHz)
+   Minimum input arrival time before clock: 0.823ns
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkin'
+  Clock period: 5.981ns (frequency: 167.203MHz)
+  Total number of paths / destination ports: 49295 / 2111
+-------------------------------------------------------------------------
+Delay:               2.990ns (Levels of Logic = 5)
+  Source:            imem/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/qspo_int_26 (FF)
+  Destination:       regfile/regs_31_831 (FF)
+  Source Clock:      clkin rising
+  Destination Clock: clkin falling
+
+  Data Path: imem/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/qspo_int_26 to regfile/regs_31_831
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.361   0.702  U0/xst_options.dist_mem_inst/gen_rom.rom_inst/qspo_int_26 (qspo<26>)
+     end scope: 'imem:qspo<26>'
+     LUT6:I1->O           14   0.097   0.355  mainctr/opCode[5]_GND_4_o_equal_2_o<5>1 (aluop<1>)
+     LUT3:I2->O           21   0.097   0.774  Mmux_mux121 (mux1<1>)
+     LUT5:I0->O           32   0.097   0.402  regfile/WriteAddr[4]_Decoder_6_OUT<6><4>1 (regfile/WriteAddr[4]_Decoder_6_OUT<6>)
+     LUT6:I5->O            1   0.097   0.000  regfile/Mmux_regs[6][31]_WriteData[31]_mux_32_OUT110 (regfile/regs[6][31]_WriteData[31]_mux_32_OUT<0>)
+     FDCE:D                    0.008          regfile/regs_31_800
+    ----------------------------------------
+    Total                      2.990ns (0.757ns logic, 2.233ns route)
+                                       (25.3% logic, 74.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clkin'
+  Total number of paths / destination ports: 1005 / 1005
+-------------------------------------------------------------------------
+Offset:              0.823ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       add4_2 (FF)
+  Destination Clock: clkin falling
+
+  Data Path: reset to add4_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1005   0.001   0.473  reset_IBUF (reset_IBUF)
+     FDS_1:S                   0.349          add4_2
+    ----------------------------------------
+    Total                      0.823ns (0.350ns logic, 0.473ns route)
+                                       (42.5% logic, 57.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock alu/Mmux_ALUCtr[3]_input1[31]_Select_15_o22
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkin          |         |         |    9.164|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock alu/_n0102
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+aluctr/_n0029  |         |         |    1.585|         |
+clkin          |         |         |    5.589|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock aluctr/_n0029
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkin          |         |         |    2.000|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clkin
+-------------------------------------------+---------+---------+---------+---------+
+                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------+---------+---------+---------+---------+
+alu/Mmux_ALUCtr[3]_input1[31]_Select_15_o22|         |         |    2.164|         |
+alu/_n0102                                 |         |         |    1.728|         |
+clkin                                      |         |    1.709|    3.028|         |
+-------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 22.03 secs
+ 
+--> 
+
+Total memory usage is 4644840 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   95 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

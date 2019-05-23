@@ -1,0 +1,15 @@
+[Inputs]
+clk
+reset
+regwr
+=RsAddr[4:0]=
+=RtAddr[4:0]=
+=WriteAddr[4:0]=
+=WriteData[31:0]=
+[Outputs]
+=RsData[31:0]=
+=RtData[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel regFile
+

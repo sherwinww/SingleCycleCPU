@@ -1,0 +1,25 @@
+ISim log file
+Running: D:\workspace\ISE\mips\top_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/workspace/ISE/mips/top_test_isim_beh.wdb 
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 10000 ns
+Simulator is doing circuit initialization process.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Finished circuit initialization process.
+WARNING in top_test.uut.dRAM.inst at time                  100 ns: 
+Reading from out-of-range address. Max address in top_test.uut.dRAM.inst is          63
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+# run 10000 ns
+Simulator is doing circuit initialization process.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Finished circuit initialization process.
+WARNING in top_test.uut.dRAM.inst at time                  100 ns: 
+Reading from out-of-range address. Max address in top_test.uut.dRAM.inst is          63

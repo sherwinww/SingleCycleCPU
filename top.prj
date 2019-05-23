@@ -1,0 +1,8 @@
+verilog work "Mips5_signnext.v"
+verilog work "Mips4_ALUCtr.v"
+verilog work "Mips3_mainCtr.v"
+verilog work "Mips2_ALU.v"
+verilog work "Mips1_regFile.v"
+verilog work "ipcore_dir/instructionROM.v"
+verilog work "ipcore_dir/dataRAM.v"
+verilog work "Top.v"

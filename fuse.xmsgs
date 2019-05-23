@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"D:/workspace/ISE/mips/../mips_cpu_source/Mips4_ALUCtr.v" Line 6: Redeclaration of ansi port <arg fmt="%s" index="1">ALUCtr</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"D:/workspace/ISE/mips/../mips_cpu_source/Mips2_ALU.v" Line 8: Redeclaration of ansi port <arg fmt="%s" index="1">ALURes</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"D:/workspace/ISE/mips/../mips_cpu_source/Mips2_ALU.v" Line 9: Redeclaration of ansi port <arg fmt="%s" index="1">zero</arg> is not allowed
+</msg>
+
+</messages>
+

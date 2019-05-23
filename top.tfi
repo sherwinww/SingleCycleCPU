@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+top instance_name (
+    .clkin(clkin), 
+    .reset(reset)
+    );
+
+

@@ -1,0 +1,8 @@
+[Inputs]
+clkin
+reset
+[Outputs]
+[BiDir]
+[ATTRIBUTES]
+VeriModel top
+
