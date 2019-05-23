@@ -1,0 +1,2 @@
+# SingleCycleCPU
+based on MIPS
