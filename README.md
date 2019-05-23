@@ -41,7 +41,7 @@
 
 ### 各模块设计
 
-源码见
+源码见[release界面](https://github.com/sherwinww/SingleCycleCPU/releases)
 
 - 指令寄存器（instrRAM）
 
